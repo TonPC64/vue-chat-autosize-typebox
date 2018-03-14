@@ -8,7 +8,6 @@
 import autosize from 'autosize'
 
 export default {
-  name: 'VueChatAutosizeTypebox',
   directives: {
     autosize: {
       bind: function (el) {
