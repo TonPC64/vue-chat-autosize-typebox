@@ -6,7 +6,9 @@
 
 <script>
 import autosize from 'autosize'
+
 export default {
+  name: 'VueChatAutosizeTypebox',
   directives: {
     autosize: {
       bind: function (el) {
@@ -26,14 +28,14 @@ export default {
     }
   },
   methods: {
-    async send (e) {
+    send (e) {
       const shifted = e.shiftKey
       if (!shifted) {
         e.preventDefault()
         const text = this.input + ''
         this.$set(this, 'input', '')
         e.target.style.height = '21px'
-        await this.sendMsg(text)
+        this.sendMsg(text)
       }
     },
     sendMsg (text) {
@@ -45,24 +47,10 @@ export default {
 
 <style scoped>
   .typing {
-    width: calc(100% - 20px);
-    overflow-y: scroll;
+    width: 100%;
+    overflow-y: auto;
     flex-wrap: nowrap;
-    padding: 0px;
-    margin: auto 10px;
     max-height: 164px;
-
     resize: vertical;
-    border: 0;
-    border-radius: 6px;
-    background-color: ghostwhite;
-    /* padding: 0 10px; */
-    font-size: 1rem;
-    box-sizing: border-box;
-
-  }
-
-  .typing:focus {
-    outline: none;
   }
 </style>

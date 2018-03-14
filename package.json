@@ -1,13 +1,16 @@
 {
   "name": "vue-chat-autosize-typebox",
-  "description": "A Vue.js project",
-  "version": "1.0.0",
+  "description": "Component of typebox chat with autosize.",
+  "version": "0.1.0",
   "author": "Chanwit Piromplad <kingkong2103@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "main": "dist/vue-chat-autosize-typebox.min.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "rm -rf ./dist && bili src/VueAutosizeInput.vue"
+    "build": "rm -rf ./dist && bili src/components/VueChatAutosizeTypebox.vue"
   },
   "dependencies": {
     "autosize": "^4.0.0",
@@ -23,9 +26,11 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
+    "bili": "^3.0.7",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
+    "rollup-plugin-vue": "^3.0.0",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

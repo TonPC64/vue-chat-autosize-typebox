@@ -10,11 +10,6 @@ export default {
   name: 'app',
   components: {
     ChatTypeBox
-  },
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
   }
 }
 </script>
