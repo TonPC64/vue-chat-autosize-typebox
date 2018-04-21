@@ -1,6 +1,9 @@
 <template>
   <div>
-    <textarea v-autosize placeholder="Type a message" class="typing" @keydown.enter='send' v-model="input" rows="1" maxlength="640"></textarea>
+    <textarea 
+    v-autosize="maxHeight"
+    :placeholder="placeholder"
+    class="typing" @keydown.enter='send' v-model="input" rows="1" maxlength="640"></textarea>
   </div>
 </template>
 
@@ -8,10 +11,26 @@
 import autosize from 'autosize'
 
 export default {
+  name: 'vueChatAutosizeTypebox',
+  props: {
+    maxHeight: {
+      type: Number,
+      default: 164
+    },
+    minHeight: {
+      type: Number,
+      default: 21
+    },
+    placeholder: {
+      type: String,
+      default: 'Type a message...'
+    }
+  },
   directives: {
     autosize: {
-      bind: function (el) {
+      bind: function (el, data) {
         autosize(el)
+        el.style.maxHeight = `${data.value}px`
       },
       componentUpdated: function (el) {
         autosize.update(el)
@@ -33,7 +52,7 @@ export default {
         e.preventDefault()
         const text = this.input + ''
         this.$set(this, 'input', '')
-        e.target.style.height = '21px'
+        e.target.style.height = `${this.minHeight}px`
         this.sendMsg(text)
       }
     },
@@ -49,7 +68,9 @@ export default {
     width: 100%;
     overflow-y: auto;
     flex-wrap: nowrap;
-    max-height: 164px;
-    resize: vertical;
+    resize: none;
+  }
+  .typing:focus {
+    outline: none;
   }
 </style>

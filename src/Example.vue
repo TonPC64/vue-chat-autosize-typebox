@@ -14,3 +14,10 @@ export default {
 }
 </script>
 
+<style scoped>
+#app {
+  width: 600px;
+}
+</style>
+
+
