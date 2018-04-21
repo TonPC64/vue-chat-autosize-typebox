@@ -1,9 +1,13 @@
 <template>
   <div>
-    <textarea 
+    <textarea
     v-autosize="maxHeight"
     :placeholder="placeholder"
-    class="typing" @keydown.enter='send' v-model="input" rows="1" maxlength="640"></textarea>
+    class="typing"
+    @keydown.enter='send'
+    v-model="input"
+    rows="1"
+    maxlength="640"></textarea>
   </div>
 </template>
 
@@ -13,6 +17,10 @@ import autosize from 'autosize'
 export default {
   name: 'vueChatAutosizeTypebox',
   props: {
+    value: {
+      type: String,
+      require: true
+    },
     maxHeight: {
       type: Number,
       default: 164
@@ -42,7 +50,16 @@ export default {
   },
   data () {
     return {
-      input: ''
+    }
+  },
+  computed: {
+    input: {
+      get () {
+        return this.value
+      },
+      set (val) {
+        this.$emit('input', val)
+      }
     }
   },
   methods: {

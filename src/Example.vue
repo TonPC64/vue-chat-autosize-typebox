@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <ChatTypeBox/>
+    <h1>Example Chat Autosize Typebox</h1>
+    <ChatTypeBox v-model="text"/>
+    {{text}}
   </div>
 </template>
 
@@ -10,13 +12,20 @@ export default {
   name: 'app',
   components: {
     ChatTypeBox
+  },
+  data () {
+    return {
+      text: ''
+    }
   }
 }
 </script>
 
 <style scoped>
 #app {
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
 }
 </style>
 
