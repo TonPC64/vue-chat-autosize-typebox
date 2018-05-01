@@ -2,7 +2,9 @@
 
 > Vue component of typebox chat with autosize.
 
-[DEMO](http://vue-chat-autosize-typebox.surge.sh/)
+## [DEMO](http://vue-chat-autosize-typebox.surge.sh/)
+
+![](./images/example.gif)
 
 ## Install
 
