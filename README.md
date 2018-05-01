@@ -1,10 +1,16 @@
 # vue-chat-autosize-typebox
 
+[![NPM version](https://img.shields.io/npm/v/vue-chat-autosize-typebox.svg?style=flat)](https://npmjs.com/package/vue-highlighter)
+[![NPM downloads](https://img.shields.io/npm/dm/vue-chat-autosize-typebox.svg?style=flat)](https://npmjs.com/package/vue-highlighter)
+[![Build Status](https://travis-ci.org/TonPC64/vue-chat-autosize-typebox.svg?branch=master)](https://travis-ci.org/TonPC64/vue-chat-autosize-typebox)
+
 > Vue component of typebox chat with autosize.
 
 ## [DEMO](http://vue-chat-autosize-typebox.surge.sh/)
 
-![](./images/example.gif)
+<p style="text-align: center;">
+  <img src="./images/example.gif"/>
+</p>
 
 ## Install
 
