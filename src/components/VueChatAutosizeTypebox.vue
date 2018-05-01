@@ -17,7 +17,7 @@ export default {
   props: {
     value: {
       type: String,
-      require: true
+      required: true
     },
     maxHeight: {
       type: Number,

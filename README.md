@@ -1,18 +1,36 @@
 # vue-chat-autosize-typebox
 
-> A Vue.js project
+> Vue component of typebox chat with autosize.
 
-## Build Setup
+[DEMO](http://vue-chat-autosize-typebox.surge.sh/)
 
-``` bash
-# install dependencies
-npm install
+## Install
 
-# serve with hot reload at localhost:8080
-npm run dev
+```js
+import Vue from 'vue';
+import ChatTypeBox from 'vue-chat-autosize-typebox';
 
-# build for production with minification
-npm run build
+Vue.component('ChatTypeBox', ChatTypeBox);
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Usage
+
+```html
+<ChatTypeBox v-model="text" @send="send"/>
+```
+
+## Events
+
+| Name | defualt parameter | Description                                          |
+| :--- | :---------------- | ---------------------------------------------------- |
+| send | (text)            | emit trim message to event, if empty string not send |
+
+## Props
+
+| Name        | Type   | Default             | Description                    |
+| :---------- | :----- | :------------------ | :----------------------------- |
+| v-model     | string |                     | binding data (required)        |
+| maxHight    | Number | 164                 | max height of typebox          |
+| minHeight   | Number | 18                  | min height of typebox          |
+| maxLength   | Number | 640                 | limit length of message        |
+| placeholder | string | 'Type a message...' | placeholder message in typebox |

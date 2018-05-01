@@ -6,12 +6,19 @@ cache:
     - "node_modules"
 before_script:
   - yarn
-script: 
+script:
   - yarn build
+  - yarn bundle
 deploy:
-  provider: npm
-  email: ${EMAIL}
-  api_key: ${AUTH_TOKEN}
-  skip_cleanup: true
-  on:
-    branch: master
+  - provider: surge
+    project: ./
+    domain: vue-chat-autosize-typebox.surge.sh
+    skip-cleanup: true
+    on:
+      branch: master
+  - provider: npm
+    email: ${EMAIL}
+    api_key: ${AUTH_TOKEN}
+    skip_cleanup: true
+    on:
+      branch: master
