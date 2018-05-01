@@ -1,11 +1,13 @@
 {
   "name": "vue-chat-autosize-typebox",
   "description": "Vue component of typebox chat with autosize.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Chanwit Piromplad <kingkong2103@gmail.com>",
   "license": "MIT",
   "main": "public/vue-chat-autosize-typebox.min.js",
-  "files": ["public"],
+  "files": [
+    "public"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/TonPC64/vue-chat-autosize-typebox.git"
@@ -19,7 +21,11 @@
     "autosize": "^4.0.0",
     "vue": "^2.5.11"
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
