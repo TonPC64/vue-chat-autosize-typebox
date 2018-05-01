@@ -1,13 +1,12 @@
-const vue = require('rollup-plugin-vue')
+const vue = require('rollup-plugin-vue');
 
 module.exports = {
   babel: {
     babelrc: false
   },
+  outDir: 'public',
   banner: true,
   format: ['umd-min'],
   css: true,
-  plugins: [
-    vue({ css: true })
-  ]
-}
+  plugins: [vue({ css: true })]
+};

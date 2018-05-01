@@ -10,6 +10,6 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
-
+/public
 package-lock.json
 yarn.lock
